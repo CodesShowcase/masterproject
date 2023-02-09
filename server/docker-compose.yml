@@ -1,0 +1,33 @@
+version: '3.9'
+
+services:
+  db:
+    image: gjrtimmer/postgresql:latest
+    restart: unless-stopped
+    environment:
+      - DB_EXTENSION
+      - DB_USER
+      - DB_PASS
+      - DB_NAME
+      - TZ
+    ports:
+      - 5432:5432
+    volumes:
+      - 'postgres:/config'
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    environment:
+      - PGADMIN_DEFAULT_EMAIL
+      - PGADMIN_DEFAULT_PASSWORD
+    ports:
+      - "8090:80"
+    volumes:
+      - 'postgres:/var/lib/pgadmin/data'
+    depends_on:
+      - db
+
+volumes:
+  postgres:
+    driver: local
+  pgadmin:
+    driver: local

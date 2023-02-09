@@ -1,0 +1,42 @@
+env:
+  browser: true
+  es2021: true
+  jest: true
+extends:
+  - eslint:recommended
+  - plugin:react/recommended
+  - plugin:react-hooks/recommended
+  - plugin:react-redux/recommended
+  - plugin:@typescript-eslint/recommended
+  - prettier
+parser: '@typescript-eslint/parser'
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: latest
+  sourceType: module
+plugins:
+  - 'react'
+  - 'react-hooks'
+  - '@typescript-eslint'
+rules:
+  react-hooks/rules-of-hooks: error
+  react-hooks/exhaustive-deps: error
+  react/no-deprecated: warn
+settings:
+  react:
+    version: detect
+overrides:
+  - files: "*.js"
+    rules:
+      react/prop-types: error
+      "@typescript-eslint/no-var-requires": off
+  - files: ["*.ts", "*.tsx"]
+    rules:
+      import/no-unresolved: off
+      import/export: off
+      react/no-deprecated: error
+  - files: ["*.test.tsx", "*.test.js", "*.test.ts"]
+    env:
+      jest: true
+      node: true

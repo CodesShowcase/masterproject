@@ -1,0 +1,263 @@
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  vertical-align: baseline;
+  text-align: inherit;
+  background: transparent;
+  color: #35373b;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+header {
+
+}
+
+header .MuiPaper-root {
+  position: relative;
+}
+
+header .logo {
+  top: 0;
+  bottom: 0;
+  margin-top: 10px;
+}
+
+header .logo-claim {
+  height: 40px;
+  float: left;
+  margin-top: 10px;
+}
+
+header .account-icon svg{
+  font-size: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+main .auth-header {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+main .auth-form {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+footer {
+  box-sizing: border-box;
+  height: 45px;
+  color: #fff;
+  background-color: #1976d2;
+  border-top: 1px solid #e0e0e0;
+  line-height: 45px;
+}
+
+footer .footer-container {
+  margin: 0px;
+}
+
+footer a:link, a:visited {
+ text-decoration: none;
+ color: #fff;
+}
+
+tGrid-row {
+    display: table-row;
+}
+
+ul {
+	display: flex;
+	align-items: center;
+  list-style-type: none;
+}
+
+li {
+	margin-left: 20px;
+}
+
+a:link, a:visited {
+ text-decoration: none;
+ color: #35373b;
+}
+
+a.auth-button {
+  color: #ffffff;
+}
+
+div.mission {
+  margin-top: 2px;
+}
+
+div .identifier {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.identifier-avatar {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  width: 125px;
+  height: 125px;
+}
+
+.logo {
+  width: inherit;
+}
+
+.personal-left {
+  padding-right: 8px;
+}
+
+.personal-left label {
+  margin-bottom: -5px;
+  margin-left: 0;
+  margin-right: 8px;
+}
+
+.personal-left span {
+  padding: 0 0 8px 0;
+}
+
+.personal-right {
+  padding-left: 8px;
+}
+
+.personal-data-paper .MuiTypography-root {
+  margin-bottom: 25px;
+}
+
+.personal-data-paper .MuiGrid-root .MuiTypography-root {
+  margin-bottom: 0px;
+}
+
+.personal-data-paper .MuiGrid-root .MuiButtonBase-root {
+  padding: 0;
+}
+
+.personal-data-paper .MuiGrid-root .MuiFormGroup-root {
+  padding-left: 10px;
+}
+
+.personal-data-paper .MuiGrid-root .MuiGrid-item {
+  padding-top: 4px;
+}
+
+.personal-data-paper .MuiGrid-root .MuiGrid-item .MuiTextField-root {
+  margin-top: 12px;
+}
+
+.station-list {
+  margin-left: inherit;
+}
+
+#fuel-selector-label {
+  line-height: 2.00em;
+  margin-right: 495px;
+}
+
+#user-links ul {
+  display: table;
+}
+
+#user-submit {
+  margin-top: 12px;
+}
+
+@media screen and (max-width: 435px) {
+  .logo {
+    width: 240px;
+  }
+
+  .station-list {
+    margin-left: -15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+	ul {
+		display: inline-block;
+		@include object(100vw,0,$aqua);
+		@include transPos(160px,null,null,null,null,null);
+		box-shadow: 0 5px 30px -4px rgba(#000, 0.2);
+		transition: all 0.3s;
+		&.showMenu {
+			height: 250px;
+			li {
+				height: 80px;
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	li {
+		@include object(50%,80px,null);
+		float: left;
+		padding-left: 40px;
+		opacity: 0;
+		visibility: hidden;
+		margin-left: 0;
+		transition: all 0.3s 0.1s;
+		&:first-child,
+		&:nth-child(2) {
+			margin-top: 80px;
+		}
+	}
+
+  header .logo-claim {
+    display: none;
+  }
+
+  div .personal-data-paper {
+    height: 935px;
+  }
+
+  .personal-left {
+    padding-right: 0px;
+  }
+
+  .personal-right {
+    padding-left: 0px;
+  }
+
+  #menu-toggle {
+		display: flex;
+	}
+
+  #head-line {
+		transform: scale(0.8);
+	}
+
+}
+
+@media screen and (max-width: 900px) {
+
+}
+
+@media screen and (max-width: 1000px) {
+  div .identifier {
+    font-size: 1.15rem;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 1200px) {
+  footer .footer-container {
+    max-width: unset;
+  }
+}
