@@ -36,7 +36,7 @@
     "react-query": "^4.0.0",
     "react-redux": "^8.0.4",
     "react-redux-loading-bar": "^5.0.4",
-    "react-router-dom": "^6.3.0",
+    "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
     "reactstrap": "^9.1.5",
     "recharts": "^2.1.16",
