@@ -8972,13 +8972,37 @@ ra-core@^4.7.2:
     react-is "^17.0.2"
     react-query "^3.32.1"
 
-ra-i18n-polyglot@^4.2.4, ra-i18n-polyglot@^4.7.2:
+ra-core@^4.8.2:
+  version "4.8.2"
+  resolved "https://registry.yarnpkg.com/ra-core/-/ra-core-4.8.2.tgz#f2d4b23b291a79dea8cf162ea7df40111ab1219c"
+  integrity sha512-+ope2O230zAV+K8RHftoMZ7BoK9vU6CC8n7j0439S5sG+cNVNdcpz9kLA/iqTzoJU9R8gj8dTxjChvD34Ga0ZQ==
+  dependencies:
+    clsx "^1.1.1"
+    date-fns "^2.19.0"
+    eventemitter3 "^4.0.7"
+    inflection "~1.12.0"
+    jsonexport "^3.2.0"
+    lodash "~4.17.5"
+    prop-types "^15.6.1"
+    query-string "^7.1.1"
+    react-is "^17.0.2"
+    react-query "^3.32.1"
+
+ra-i18n-polyglot@^4.7.2:
   version "4.7.2"
   resolved "https://registry.yarnpkg.com/ra-i18n-polyglot/-/ra-i18n-polyglot-4.7.2.tgz#12e3b0b8d53c58a014f12c9776954b0d9931771e"
   integrity sha512-5K9dm0P2fjrPiVhyTxuXCS8K2ZAdlh6YfAVWva+Z4y1jbJVLJZj6JgHtpLPZIO3MW5MeQu7g3E0W/jGUM3N0dQ==
   dependencies:
     node-polyglot "^2.2.2"
     ra-core "^4.7.2"
+
+ra-i18n-polyglot@^4.8.0:
+  version "4.8.2"
+  resolved "https://registry.yarnpkg.com/ra-i18n-polyglot/-/ra-i18n-polyglot-4.8.2.tgz#750fbd6cb0e23b51c13c6016d0c17cacbfb9429f"
+  integrity sha512-1qBG0Fruv7Ocs0KEj2beF+IzbTWAjAdSUP+Tu8sfbAacoOnHyPKnvNAqIukRGYDKfw4aH4vSDM16YTVuFgrEAg==
+  dependencies:
+    node-polyglot "^2.2.2"
+    ra-core "^4.8.2"
 
 ra-language-english@^4.2.4, ra-language-english@^4.7.2:
   version "4.7.2"
