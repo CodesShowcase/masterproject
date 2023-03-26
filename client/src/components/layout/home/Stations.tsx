@@ -94,12 +94,6 @@ export function Stations() {
       </Grid>
 
       <Grid item xs={12} md={12} lg={12}>
-        <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height: 340 }}>
-        <IFrame height="320px" id="gmaps" url={gMaps}></IFrame>
-        </Paper>
-      </Grid>
-
-      <Grid item xs={12} md={12} lg={12}>
         <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
           <Title>Next 10 Fuel Stations</Title>
           <Table className="station-list" size="small" >
@@ -138,6 +132,13 @@ export function Stations() {
           </Table>
         </Paper>
       </Grid>
+
+      <Grid item xs={12} md={12} lg={12}>
+        <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', height: 340 }}>
+        <IFrame height="320px" id="gmaps" url={gMaps}></IFrame>
+        </Paper>
+      </Grid>
+
     </React.Fragment>
   )
 }

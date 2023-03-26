@@ -7,7 +7,8 @@ import Typography from '@mui/material/Typography'
 import IconButton from '@mui/material/IconButton'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
-import LoginIcon from '@mui/icons-material/Login'
+//import LoginIcon from '@mui/icons-material/Login'
+import AccountBoxIcon from '@mui/icons-material/AccountBox'
 import { getCredentials, getAuthenticated } from '../../../features/auth'
 import { useAppSelector } from '../../../hooks'
 
@@ -45,7 +46,7 @@ function Navigation() {
         </Typography>
         <Box sx={{ flexGrow: 0 }}>
           <IconButton onClick={openUserMenu} color="inherit" className="account-icon">
-            <LoginIcon />
+            <AccountBoxIcon />
           </IconButton>
           <Menu
             sx={{ mt: '45px' }}

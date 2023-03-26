@@ -53,6 +53,7 @@ export function BestPrices() {
               <Typography variant="h4" component="h3">{bestPrices?.diesellow} €</Typography>
             </Grid>
           </Grid>
+          <Typography sx={{ mt: 4 }} >This is a demo application with prices from 2022 which is limited to Berlin!</Typography>
         </Paper>
       </Grid>
     </React.Fragment>
