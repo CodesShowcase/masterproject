@@ -28,7 +28,7 @@ export default function Login(props: PushProps) {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget)
-    const path = '/'
+    const path = '/home'
     try {
       const response = await fetch(`${REST_API}/api/users/login`, {
         method: 'POST',
