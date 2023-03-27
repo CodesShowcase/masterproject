@@ -161,6 +161,7 @@ export class UserHandler {
 				) {
 					console.log(req.session)
 					req.session.user = { id: loginUser.id, level: loginUser.userlevel, username: loginUser.username }
+					console.log(req.session.user)
 					res.status(200).json({ "id": loginUser.id , "username": loginUser.username, "userlevel": loginUser.userlevel })
 				} else {
 					res.status(401).json(`Passwords do not match!`)
@@ -175,8 +176,6 @@ export class UserHandler {
 
 	async logout(req: Request, res: Response): Promise<void> {
 		try {
-			// Alternatively destroy the cookie
-			// req.session.cookie.expires = new Date().getTime()
 			req.session.destroy((err) => {
 				res.status(200).json("Logged out")
 			})
@@ -187,9 +186,6 @@ export class UserHandler {
 
 	async reset(req: Request, res: Response): Promise<void> {
 		try {
-			//const user: User = {
-			//	username: req.body.username as string,
-			//}
 			const user: User = { username: req.params.username as string }
 			const loginUser = await store.reset(user.username)
 			console.log(loginUser)

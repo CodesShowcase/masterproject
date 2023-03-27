@@ -18,9 +18,9 @@ function Navigation() {
   const authCredentials = useAppSelector(getCredentials)
   const isAuthenticated = useAppSelector(getAuthenticated)
 
-  const settings = { guest: [ { name: 'home', url: '/' }, { name: 'login', url: '/login' } ],
-  user: [ { name: 'home', url: '/' }, { name: 'settings', url: `/user/${authCredentials.id}` }, {name: 'logout', url: '/logout'} ],
-  admin: [ { name: 'home', url: '/' }, { name: 'dashboard', url: '/dashboard' }, {name: 'statistics', url: '/statistics'}, { name: 'settings', url: `/user/${authCredentials.id}` }, {name: 'logout', url: '/logout'} ] };
+  const settings = { guest: [ { name: 'home', url: '/home' }, { name: 'login', url: '/login' } ],
+  user: [ { name: 'home', url: '/home' }, { name: 'settings', url: `/user/${authCredentials.id}` }, {name: 'logout', url: '/logout'} ],
+  admin: [ { name: 'home', url: '/home' }, { name: 'dashboard', url: '/dashboard' }, {name: 'statistics', url: '/statistics'}, { name: 'settings', url: `/user/${authCredentials.id}` }, {name: 'logout', url: '/logout'} ] };
 
   const openUserMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorUserMenu(event.currentTarget)

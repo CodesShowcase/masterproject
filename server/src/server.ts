@@ -26,9 +26,9 @@ const app: Application = express()
 const domain  = process.env.CORS_DOMAIN as string
 const port    = process.env.EXPRESS_PORT as string
 const secret  = process.env.SESSION_SECRET as string
+const secure  = (process.env.SECURE as string === 'true') ? true : false
 
 //app.use(helmet())
-
 
 app.use(morgan('short'))
 app.use(bodyParser.json())
@@ -51,7 +51,7 @@ app.use(session({
   resave: false,
   cookie: { 
     maxAge: 3600000,
-    secure: true,
+    secure: secure,
   } 
 }))
 

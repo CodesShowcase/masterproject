@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { LoadingBar } from 'react-redux-loading-bar'
-import { Navigation, Login, Logout, Reset, Signup, Welcome, Home, Dashboard, Simulator, Statistics, User, Footer } from './components'
-import { PrivateRoute } from './components/routing'
+import { Navigation, Login, Logout, Reset, Signup, Welcome, Home, Dashboard, Simulator, Statistics, User, Footer, LandingPage } from './components'
+//import { PrivateRoute } from './components/routing'
 import './styles/App.css'
 
 
@@ -15,7 +15,8 @@ function App() {
           <Navigation />
           <main>
               <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<LandingPage />} />
+                <Route path="/home" element={<Home />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/simulator" element={<Simulator />} />
                 <Route path="/statistics" element={<Statistics />} />

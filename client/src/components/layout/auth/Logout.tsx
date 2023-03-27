@@ -36,7 +36,6 @@ export default function Logout(props: PushProps) {
         const result = await response.json()
         dispatch(logoutUser)
         navigate(path)
-        console.log(result)
 
       } catch (err) {
         let errorMessage = "Failed to do something exceptional";
