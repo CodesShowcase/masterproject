@@ -28,8 +28,9 @@ Attached is a sample environment file (`.env-sample`):
 * BCRYPT_SALT=project
 * SALT_ROUNDS=10
 * EXPRESS_PORT=3080
-* SESSION_SECRET=project
 * CORS_DOMAIN=http://localhost:3080
+* SECURE=false
+* SESSION_SECRET=project
 * GMAIL_USER= e.g. test@test.com
 * GMAIL_PASS= not your regular password, you need an app password
 * GMAIL_SENDER=`"The Evil Ghost 👻" <test@test.com>`
@@ -45,6 +46,10 @@ Attached is a sample environment file (`.env-sample`):
 * TZ=Europe/Berlin
 
 This usually does fit and if it fits for you, you just need to rename it to .env.
+
+Do under no circumstance change SECURE to true unless you have a valid SSL setup (e.g. valid domain with Let's Encrypt).
+
+Otherwise it will definitely not work, since secure cookies only work in secure setups!
 
 Please make sure, that the timezone (TZ) is your timezone, otherwise it will not work well.
 
