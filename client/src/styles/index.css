@@ -108,6 +108,11 @@ div .identifier {
   font-weight: 700;
 }
 
+.landing-grid a:link, .landing-grid a:visited {
+  text-decoration: none;
+  color: #fff;
+ }
+
 .identifier-avatar {
   margin-bottom: 5px;
   margin-top: 5px;
